@@ -15,8 +15,8 @@
 
   <body>
     <header>
-      <div class="icon-containers"><img src="images/apple.png" /></div>
-      <a href="index.html">Store</a>
+      <a href="index.html" class="header__icon-containers" ><img src="images/apple.png" /></a>
+      <a>Store</a>
       <span>Mac</span>
       <span>iPad</span>
       <span>iPhone</span>
@@ -27,10 +27,10 @@
       <span>Entertainment</span>
       <span>Accessories</span>
       <span>Support</span>
-      <div class="icon-items">
-        <div class="icon-containers"><img src="images/search.png" /></div>
-        <div class="icon-containers"><img src="images/store.png" /></div>
-        <div class="icon-containers"><img src="images/menu.png" /></div>
+      <div class="header__icon-items">
+        <div class="header__icon-containers" ><img src="images/search.png" /></div>
+        <div class="header__icon-containers"><img src="images/store.png" /></div>
+        <span class="header__icon-containers"><img src="images/menu.png" /></span>
       </div>
     </header>
     <div class="donation-text">
@@ -38,93 +38,168 @@
       Pay at Apple. Through 12/8.
     </div>
 
-    <div class="intro-background" id="intro1">
-      <div class="exp-container" id="container1">
-        <div class="text-bold" id="iphone-text">iPhone 16 Pro</div>
-        <div class="text-thin" id="iphone-text2">
-          Hello, Apple Intelligence.
-        </div>
-
+    <div class="hero hero--desert">
+      <div class="hero__text-container" id="container-desert">
+        <div class="hero__title hero__title--iphone">iPhone 16 Pro</div>
+        <div class="hero__subtitle hero__subtitle--iphone">Hello, Apple Intelligence.</div>
         <div class="button-container">
-          <button class="button-colored">
-            Learn more
-          </button>
-          <button class="button-transparent">
-            Buy
-          </button>
+          <button class="button">Learn more</button>
+          <button class="button button--outlined">Buy</button>
         </div>
       </div>
     </div>
 
-    <div class="intro-background" id="intro2">
-      <div class="exp-container" id="container2">
-        <div class="text-bold" id="iphone-text">iPhone 16 Pro</div>
-        <div class="text-thin" id="iphone-text2">
-          Hello, Apple Intelligence.
-        </div>
-
+    <div class="hero hero--ultramarine">
+      <div class="hero__text-container" id="container-ultramarine">
+        <div class="hero__title hero__title--iphone">iPhone 16 Pro</div>
+        <div class="hero__subtitle hero__subtitle--iphone">Hello, Apple Intelligence.</div>
         <div class="button-container">
-          <button class="button-colored" id="button-colored1">
-            Learn more
-          </button>
-          <button class="button-transparent" id="button-transparent1">
-            Buy
-          </button>
+          <button class="button button--ultramarine">Learn more</button>
+          <button class="button button--ultramarine-outlined">Buy</button>
         </div>
       </div>
     </div>
 
-    <div class="intro-background" id="intro3">
-      <div class="exp-container" id="gift-exp-container">
-        <div class="text-bold" id="gift-text">Gift magic.</div>
-        <div class="text-thin" id="gift-text2">
-          Make their holiday wish come true.
-        </div>
+    <div class="hero hero--gift">
+      <div class="hero__text-container hero__text-container--gift">
+        <div class="hero__title hero__title--gift">Gift magic.</div>
+        <div class="hero__subtitle hero__subtitle--gift">Make their holiday wish come true.</div>
         <div class="button-container">
-          <button class="button-colored" id="button-colored2">
-            Shop gifts
-          </button>
+          <button class="button">Shop gifts</button>
         </div>
       </div>
     </div>
 
-<div class="products">
-  <div class="products-detailed" id="product1">
-    <img src="images/product1-detail.png" id="product1-detail"/>
-     <div class="text-thin" id="product1-text">Two sizes. Faster chip. Does it all.</div>
-     
-     <div class="button-container" id="products-button">
-          <button class="button-colored" id="product-button-colored">
-            Learn more
-          </button>
-          <button class="button-transparent" id="product-button-transparent">
-            Buy
-          </button>
+<div class="main">
+  <div class="products products--ipad">
+    <img src="images/product1-detail.png" id="ipad-title"/>
+     <div class="products__subtitle products__subtitle--ipad">Two sizes. Faster chip. Does it all.</div>
+     <div class="button-container button-container--ipad">
+          <button class="button" >Learn more</button>
+          <button class="button button--outlined" id="product-button-transparent">Buy</button>
      </div>
-
-     <div class="product1-colored-text">Hello, Apple Intelligence.</div>
+     <div class="products--ipad-colored-text">Hello, Apple Intelligence.</div>
   </div>
-  <div class="products-detailed" id="product2">
-    <div class="exp-container" id="product-exp-container">
-        <div class="text-bold" id="product-text-bold">AirPods Pro 2</div>
-        <div class="text-thin" id="product-text-thin">
-          Now with a Hearing Aid feature.2
-        </div>
 
-        <div class="button-container" id="product-button-container">
-          <button class="button-colored" id="product-button-colored">
-            Learn more
-          </button>
-          <button class="button-transparent" id="product-button-transparent">
-            Buy
-          </button>
+  <div class="products products--airpods4">
+    <div class="producs__text-container products__text-container--airpods">
+      <div class="products__text-container-header">
+        <div class="products__title products__title--airpods">AirPods 4</div>
+        <div class="products__subtitle products__subtitle--airpods">Iconic. Now supersonic. Available with Active Noise Cancellation.2</div>
+      </div>
+        <div class="button-container">
+          <button class="button">Learn more</button>
+          <button class="button button--outlined">Buy</button>
         </div>
       </div>
   </div>
-  <div class="products-detailed" id="product3"></div>
-  <div class="products-detailed" id="product4"></div>
-  <div class="products-detailed" id="product5"></div>
-  <div class="products-detailed" id="product6"></div>
+
+  <div class="products products--airpods2">
+    <div class="producs__text-container products__text-container--airpods">
+      <div class="products__text-container-header">
+        <div class="products__title products__title--airpods">AirPods Pro 2</div>
+        <div class="products__subtitle products__subtitle--airpods">Now with a Hearing Aid feature.2</div>
+      </div>
+        <div class="button-container">
+          <button class="button">Learn more</button>
+          <button class="button button--outlined">Buy</button>
+        </div>
+      </div>
+  </div>
+
+   <div class="products products--iwatch-pad">
+     <div class="products__text-container">
+      <div class="products__text-container-header">
+        <div class="products__title">
+          <img src="images/products-logo.png" class="products__title-logo"/>WATCH</div>
+          <div class="products__title products__title--iwatch">SERIES 10</div>
+        <div class="products__subtitle">Thinstant classic.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Learn more</button>
+        <button class="button button--outlined">Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="products products--iwatch-web">
+     <div class="products__text-container">
+      <div class="products__text-container-header">
+        <div class="products__title">
+          <img src="images/products-logo.png" class="products__title-logo"/>WATCH</div>
+          <div class="products__title products__title--iwatch">SERIES 10</div>
+        <div class="products__subtitle">Thinstant classic.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Learn more</button>
+        <button class="button button--outlined">Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="products products--macbook">
+    <div class="products__text-container">
+      <div class="products__text-container-header">
+        <div class="products__title">MacBook Air</div>
+        <div class="products__subtitle">Lean. Mean. M3 machine.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Learn more</button>
+        <button class="button button--outlined">Buy</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="products products--business">
+    <div class="products__text-container producs__text-container--business">
+      <div class="products__text-container-header">
+        <div class="products__title">Apple for Small Business</div>
+        <div class="products__subtitle">Hardware, software, and expert help - all in one place.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Learn more</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="products products--carrierdeal">
+    <div class="products__text-container--carrierdeal">
+      <div class="products__text-container-header">
+        <div class="products__title">Carrier deals at Apple</div>
+        <div class="products__subtitle">Get up to $1000 in credit on a new iPhone. Trade-in may be required.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Find your deal</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="products products--trade-in">
+    <div class="products__text-container">
+      <div class="products__text-container-header">
+        <div class="products__title">
+          <img src="images/products-logo.png" class="products__title-logo"/>Trade In</div>
+        <div class="products__subtitle">Get $180-$650 in credit when you trade in iPhone 12 or higher.3</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Get your estimate</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="products products--card">
+    <div class="products__text-container">
+      <div class="products__text-container-header">
+        <div class="products__title">
+          <img src="images/products-logo.png" class="products__title-logo"/>Card</div>
+        <div class="products__subtitle">Get up to 3% Daily Cash back with every purchase.</div>
+      </div>
+      <div class="button-container">
+        <button class="button">Learn more</button>
+        <button class="button button--outlined">Apply now</button>
+      </div>
+    </div>
+  </div>
 </div>
   </body>
 </html>
