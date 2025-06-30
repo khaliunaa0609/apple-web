@@ -434,6 +434,17 @@ a {
 }
 
 
+.recommendation {
+  width: 834px;
+  height: 472px;
+  position: relative;
+}
+
+.recommendation--pop {
+  background-color: pink;
+}
+
+
 @media (max-width: 3200px) {
   header {
     height: 44px;

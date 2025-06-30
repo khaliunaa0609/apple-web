@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  background-color: rgba(245, 245, 247, 1);
+  min-width: 1024px;
+}
+header {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 247, 0.8);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 60px;
+  letter-spacing: -0.28px;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 1024px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__icon-items {
+  display: flex;
+  gap: 24px;
+}
+
+.header__icon-containers {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-text {
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(29, 29, 31, 1);
+  padding: 16px 31px;
+  min-width: 1024px;
+  background-color: white;
+  }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-bottom: 100px;
+}
+
+.hero__top {
+    height: 75px;
+    background-image: url(images/store-hero.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero__main {
+   box-sizing: border-box;
+   padding: 0 140px;
+   display: flex;
+   justify-content: space-between;
+   height: 100px;
+   font-family: Inter;
+   font-weight: 700;
+}
+
+.title--colored {
+    background: linear-gradient(
+    90.43deg,
+    #0090f7 0%,
+    #ba62fc 33.33%,
+    #f2416b 66.67%,
+    #f55600 100% );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title--grey {
+    color: rgba(110, 110, 115, 1);
+}
+
+.hero__text-container {
+    display: flex;
+    gap: 32px;
+    height: 52px;
+    font-size: 44px;
+    line-height: 52.01px;
+    min-width: 655px;
+}
+
+.hero__products-container {
+    height: 146px;
+    display: flex;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 0 140px;
+    min-width: 1024px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.hero__product {
+    width: 136px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(29, 29, 31, 1);
+    scroll-snap-align: center;
+}
+
+.hero__product-image {
+    width: 120px;
+    height: 78px;
+}
+
+.hero__product-image--mac {
+    background-image: url(images/store-mac.png);
+}
+
+.hero__product-image--iphone {
+    background-image: url(images/store-iphone.png);
+}
+.hero__product-image--ipad {
+    background-image: url(images/store-ipad.png);
+}
+.hero__product-image--iwatch {
+    background-image: url(images/store-iwatch.png);
+}
+.hero__product-image--ivision {
+    background-image: url(images/store-ivision.png);
+}
+.hero__product-image--airpods {
+    background-image: url(images/store-airpods.png);
+}
+.hero__product-image--airtag {
+    background-image: url(images/store-airtag.png);
+}.hero__product-image--appletv {
+    background-image: url(images/store-appletv.png);
+}
+.hero__product-image--homepod {
+    background-image: url(images/store-homepod.png);
+}
+.hero__product-image--accessories {
+    background-image: url(images/store-accessories.png);
+}
+.hero__product-image--giftcard {
+    background-image: url(images/store-giftcard.png);
+}
+
+.hero__product-text {
+    height: 16px;
+}
+
+.sections {
+    height: 558px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 100px;
+}
+
+.section__title {
+    display: flex;
+    gap: 4px;
+    font-family: Inter;
+    font-weight: 700;
+    height: 34px;
+    padding-left: 140px;
+}
+
+.section__product-container {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 140px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.product {
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    background-position: center;
+    background-size: cover;
+    scroll-snap-align: center;
+}
+
+.thelatest__product {
+    width: 480px;
+}
+
+.thelatest__product--iphone {
+    background-image: url(images/thelatest-iphone.png);
+}
+
+.thelatest__product--iwatch {
+    background-image: url(images/thelatest-iwatch.png);
+}
+
+.thelatest__product--ipad {
+    background-image: url(images/thelatest-ipad.png);
+}
+
+.thelatest__product--mac {
+    background-image: url(images/thelatest-mac.png);
+}
+
+.default__product {
+    width: 313px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+.personalization__product--items {
+    width: 400px;
+    background-image: url(images/personalization-intro.png);
+    position: relative;
+}
+
+.holidaypick__product--items {
+    width: 400px;
+    background-image: url(images/holidaypick-intro.png);
+    position: relative;
+}
+
+.default__product--items-position {
+    position: absolute;
+    top: 71px;
+    left: 41.5px;
+    width: 230px;
+    height: 230px;
+}
+
+
