@@ -75,6 +75,45 @@ a {
    font-weight: 700;
 }
 
+.hero__main--specialist {
+    display: flex; 
+    gap: 16px; 
+    flex-direction: column; 
+    min-width: 226px
+}
+
+.specialist--image-container {
+    display: flex; 
+    gap: 15px;
+}
+
+.specialist--text-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px;
+}
+
+.specialist--text {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    height: 44px;
+}
+
+.specialist--text span {
+    font-weight: 400;
+    color: rgba(0, 102, 204, 1);
+    height: 16px;
+}
+
+.specialist--text a {
+    font-weight: 400;
+    color: rgba(0, 102, 204, 1);
+    height: 16px;
+    text-decoration: underline;
+}
+
 .title--colored {
     background: linear-gradient(
     90.43deg,
@@ -209,30 +248,187 @@ a {
     scroll-snap-align: center;
 }
 
-.thelatest__product {
+.product__480 {
     width: 480px;
+    position: relative;
 }
 
-.thelatest__product--iphone {
+.product__480--iphone {
     background-image: url(images/thelatest-iphone.png);
 }
 
-.thelatest__product--iwatch {
+.product__480--iwatch {
     background-image: url(images/thelatest-iwatch.png);
 }
 
-.thelatest__product--ipad {
+.product__480--ipad {
     background-image: url(images/thelatest-ipad.png);
 }
 
-.thelatest__product--mac {
+.product__480--mac {
     background-image: url(images/thelatest-mac.png);
 }
 
-.default__product {
+.product__480--gift {
+    background-image: url(images/onlyatapple-intro.png);
+}
+
+.product__480--tradein {
+    background-image: url(images/onlyatapple-tradein.png);
+}
+
+.product__480--specialist {
+    background-image: url(images/onlyatapple-specialist.png);
+}
+
+.product__480--applemusic {
+    background-image: url(images/appleexperience-applemusic.png);
+}
+
+.product__480--appletv {
+    background-image: url(images/appleexperience-appletv.png);
+}
+
+.product__480--apps {
+    background-image: url(images/appleexperience-apps.png);
+}
+
+.product__480--appleintelligence {
+    background-image: url(images/appleexperience-appleintelligence.png);
+}
+
+.product__400 {
+    width: 400px;
+    position: relative;
+}
+
+.product__400--carrierdeal {
+    background-image: url(images/special-carrierdeal.png);
+}
+
+.product__400--education {
+    background-image: url(images/special-education.png);
+}
+
+.product__400--refurbished {
+    background-image: url(images/special-refurbished.png);
+}
+
+.product__400--business {
+    background-image: url(images/special-business.png);
+}
+
+.product__400--government {
+    background-image: url(images/special-government.png);
+}
+
+.product__313 {
     width: 313px;
     background-color: rgba(255, 255, 255, 1);
     position: relative;
+}
+
+.product__313--items-position {
+    position: absolute;
+    top: 71px;
+    left: 41.5px;
+    width: 230px;
+    height: 230px;
+}
+
+.products__color--position {
+    position: absolute;
+    top: 326px;
+}
+
+.products__color--position1 {
+    left: 109px;
+}
+
+.products__color--position2 {
+    left: 128px;
+}
+
+.products__color--position3 {
+    left: 147px;
+}
+
+.products__color--position4 {
+    left: 166px;
+}
+
+.products__color--position5 {
+    left: 185px;
+}
+
+.products__color--case1 {
+    left: 95.77px;
+}
+
+.products__color--case2 {
+    left: 114.77px;
+}
+
+.products__color--case3 {
+    left: 133.77px;
+}
+
+.products__color--case4 {
+    left: 152.77px;
+}
+
+.products__color--case5 {
+    left: 171.77px;
+}
+
+.products__color--case6 {
+    left: 190.77px;
+}
+
+.products__color--folio1 {
+    left: 118.5px;
+}
+
+.products__color--folio2 {
+    left: 137.5px;
+}
+
+.products__color--folio3 {
+    left: 156.5px;
+}
+
+.products__color--folio4 {
+    left: 175.5px;
+}
+
+.product__onlyatapple{
+    width: 313px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 0;
+   
+}
+
+.product__onlyatapple--text-container {
+    background-color:rgba(255, 255, 255, 1);
+    height: 240px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.product__onlyatapple--text {
+    width: 238px;
+    position: absolute;
+    left: 30px;
 }
 
 .personalization__product--items {
@@ -247,12 +443,184 @@ a {
     position: relative;
 }
 
-.default__product--items-position {
+.product__text-container {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 71px;
-    left: 41.5px;
-    width: 230px;
-    height: 230px;
+    top: 30px;
+    left: 30px;
+}
+
+.product__text-container--pricing {
+    top: 359px;
+    left: 28px;
+}
+
+.product__text-container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product__text-container2--pricing {
+    gap: 52px;
+}
+
+.product__title--additional-container {
+    height: 24px;
+}
+
+.product__title--additional-container-pricing {
+    height: 15px;
+    padding-bottom: 6px;
+}
+
+.product__title {
+    font-family: Inter;
+    height: 32px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: rgba(29, 29, 31, 1);
+}
+
+.product__title--personalization {
+    width: 197px;
+    position: absolute;
+    top: 53px;
+    left: 30px;
+}
+
+.product__title--holiday {
+    width: 326px;
+    position: absolute;
+    top: 54px;
+    left: 30px;
+}
+
+.product__title--onlyatapple {
+    width: 305px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.product__title--additional {
+    font-size: 12px;
+    line-height: 16px;
+    height: 14px;
+    color: rgba(182, 68, 0, 1);
+}
+
+.product__title--additional-exp {
+    font-size: 12px;
+    line-height: 16px;
+    height: 14px;
+    position: absolute;
+    top: 31px;
+    left: 30px;
+    color: rgba(110, 110, 115, 1);
+}
+
+.product__title--additional-whiteexp {
+    font-size: 12px;
+    line-height: 16px;
+    height: 14px;
+    position: absolute;
+    top: 31px;
+    left: 30px;
+    color: rgba(245, 245, 247, 1);
+}
+
+.product__title--pricing {
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.product__title--exp {
+    width: 330px;
+    position: absolute;
+    top: 54px;
+    left: 30px;
+}
+
+.product__title--whiteexp {
+    width: 330px;
+    position: absolute;
+    top: 54px;
+    left: 30px;
+    color: rgba(245, 245, 247, 1);
+}
+
+.product__subtitle {
+    font-family: Inter;
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(29, 29, 31, 1);
+}
+
+.products__subtitle--pricing {
+    height: 16px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.product__subtitle--exp {
+    width: 320px;
+    position: absolute;
+    top: 130px;
+    left: 30px;
+}
+
+.product__subtitle--specialexp {
+    width: 320px;
+    position: absolute;
+    top: 158px;
+    left: 30px;
+}
+
+footer{
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 150px;
+}
+
+.footer__title {
+    height: 32px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: rgba(29, 29, 31, 1);
+    padding-left: 140px;
+}
+
+.button-container {
+    display: flex;
+    height: 40px;
+    gap: 12px;
+    padding-left: 140px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  line-height: 20px;
+  letter-spacing: -0.37px;
+  border: 0;
+  background-color: transparent;
+  color: rgba(29, 29, 31, 1);
+  border: 1px solid rgba(29, 29, 31, 1);
 }
 
 

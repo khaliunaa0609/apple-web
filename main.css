@@ -173,6 +173,7 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .products--ipad {
@@ -309,11 +310,6 @@ a {
   height: 32px;
 }
 
-.products__title-appletv {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 1);
-}
-
 .products__subtitle {
   font-size: 18px;
   line-height: 25px;
@@ -328,11 +324,6 @@ a {
 
 .products__subtitle--airpods {
   color: rgba(245, 245, 247, 1);
-}
-
-.products__subtitle-appletv {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 1);
 }
 
 .appletv {
@@ -353,6 +344,8 @@ a {
   flex-shrink: 0;
   position: relative;
   scroll-snap-align: center;
+  background-position: center;
+  background-size: cover;
 }
 
 .appletv__products--1 {
@@ -372,7 +365,7 @@ a {
 }
 
 .appletv__products--5 {
-  background-image: url(images/appletv5.jpeg);
+  background-image: url(images/appletv5.png);
 }
 
 .appletv__products--6 {
@@ -396,18 +389,17 @@ a {
 }
 
 .appletv__title-container {
-  height: 44px;
   font-family: Inter;
-  display: flex;
-  align-items: center;
   position: absolute;
-  top: 650px;
-  left: 223px;
-  gap: 4px;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+ 
 }
 
-.appletv__title-container-stream {
-  left: 260px;
+.appletv__title-container span {
+  font-weight: 700;
+  width: 80px;
 }
 
 .appletv__tablist {
@@ -433,15 +425,11 @@ a {
   background-color: rgba(0, 0, 0, 0.42);
 }
 
-
-.recommendation {
-  width: 834px;
-  height: 472px;
-  position: relative;
-}
-
-.recommendation--pop {
-  background-color: pink;
+.appletv__tablist a:nth-child(1) {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 
@@ -458,6 +446,10 @@ a {
 
   .header__icon-items {
     gap: 24px;
+  }
+
+  .header__icon-containers:nth-child(3) {
+    display: none;
   }
 
   .hero--desert {
@@ -480,6 +472,14 @@ a {
     top: 55px;
   }
 
+  .main {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 12px;
+  }
+  
+
   .products--airpods4 {
     display: none;
   }
@@ -499,6 +499,28 @@ a {
   .products__text-container {
     max-width: 322px;
   }
+
+  .appletv__products {
+    width: 1250px;
+    height: 668px;
+  }
+
+  .button--appletv {
+    width: 133px;
+    height: 44px;
+    top: 566px;
+    left: 70px;
+  }
+
+  .appletv__title-container {
+    top: 578px;
+    left: 223px;
+  }
+
+  .appletv__title-container br {
+  display: none;
+}
+
 }
 
 @media (max-width: 1024px) {
@@ -515,8 +537,16 @@ a {
     display: none;
   }
 
-  span {
+  header span {
     display: none;
+  }
+
+  .header__icon-items {
+    gap: 0;
+  }
+
+  .header__icon-containers:nth-child(3) {
+    display: flex;
   }
 
   .hero--desert {
@@ -540,10 +570,12 @@ a {
   }
 
   .products--airpods4 {
+    
     display: flex;
   }
 
    .products--iwatch-pad {
+    
     display: flex;
   }
 
@@ -601,9 +633,42 @@ a {
     font-size: 18px;
     line-height: 20px;
   }
+
+  .appletv__products {
+    width: 689px;
+    height: 368px;
+  }
+
+  .button--appletv {
+    width: 108px;
+    height: 36px;
+    top: 305px;
+    left: 30px;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .appletv__title-container {
+    width: 401px;
+    top: 313px;
+    left: 156px;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .appletv__title-container br {
+  display: none;
+}
+
 }
 
 @media (max-width: 430px) {
+  body {
+    min-width: 240px
+  }
+  
   header {
     height: 48px;
     justify-content: space-between;
@@ -617,8 +682,16 @@ a {
     display: none;
   }
 
-  span {
+  header span {
     display: none;
+  }
+
+  .header__icon-items {
+    gap: 0;
+  }
+
+  .header__icon-containers:nth-child(3) {
+    display: flex;
   }
 
   .hero--desert {
@@ -664,11 +737,6 @@ a {
   .button-container {
     gap: 12px;
     height: 36px;
-  }
-
-  .main {
-    
-    margin: 0px;
   }
 
   .products {
@@ -730,13 +798,68 @@ a {
   letter-spacing: 2px;
 }
 
-  /* .button {
-    width: 107px;
-    height: 36px;
-  }
+.appletv__products {
+  background-position: center;
+  background-size: cover;
+  width: 274px;
+  height: 495px;
+  background-color: rgba(0, 0, 0, 0.42);
+}
 
-  .button--outlined {
-    width: 66px;
-    height: 34px;
-  } */
+.appletv__products--1 {
+  background-image: url(images/appletv1-phone.png);
+}
+
+.appletv__products--2 {
+  background-image: url(images/appletv2-phone.png);
+}
+
+.appletv__products--3 {
+  background-image: url(images/appletv3-phone.png);
+}
+
+.appletv__products--4 {
+  background-image: url(images/appletv4-phone.png);
+}
+
+.appletv__products--5 {
+  background-image: url(images/appletv5-phone.png);
+}
+
+.appletv__products--6 {
+  background-image: url(images/appletv6-phone.png);
+}
+
+.appletv__products--7 {
+  background-image: url(images/appletv7-phone.png);
+}
+
+.appletv__products--8 {
+  background-image: url(images/appletv8-phone.png);
+}
+
+.appletv__products--9 {
+  background-image: url(images/appletv9-phone.png);
+}
+
+.appletv__products--10 {
+  background-image: url(images/appletv10-phone.png);
+}
+
+.button--appletv {
+  top: 440px;
+  left: 80px;
+}
+
+.appletv__title-container {
+  top: 380px;
+  width: 270px;
+  left: 2px;
+  text-align: center;
+}
+
+.appletv__title-container br {
+  display: block;
+}
+
 }
