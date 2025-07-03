@@ -1,12 +1,17 @@
 body {
   margin: 0;
+  max-width: 2800px;
 }
+
+
 header {
   width: 100%;
   height: 100%;
   background-color: rgba(245, 245, 247, 0.8);
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 24px;
   font-family: Inter;
   font-weight: 400;
   font-size: 12px;
@@ -14,6 +19,11 @@ header {
   letter-spacing: -0.28px;
   text-align: center;
   vertical-align: middle;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 a {
@@ -22,6 +32,7 @@ a {
 
 .header__icon-items {
   display: flex;
+  gap: 24px;
 }
 
 .header__icon-containers {
@@ -158,7 +169,7 @@ a {
   border: solid 1px rgba(255, 255, 255, 1);
 }
 
-.main {
+.main-features {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -327,6 +338,7 @@ a {
 }
 
 .appletv {
+  max-width: 2800px;
   margin-top: 12px;
     width: 100vw;
     display: flex;
@@ -394,7 +406,8 @@ a {
   font-size: 17px;
   line-height: 20px;
   color: white;
- 
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+
 }
 
 .appletv__title-container span {
@@ -433,19 +446,146 @@ a {
 }
 
 
-@media (max-width: 3200px) {
-  header {
-    height: 44px;
-    gap: 24px;
-    justify-content: center;
-  }
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(572px * 12 + 16px * 12);
+  animation: scroll 30s linear infinite;
+}
+
+
+.slider-wrapper:hover .slider-track {
+  animation-play-state: paused;
+}
+
+
+.card {
+  flex: 0 0 auto;
+  width: 572px;
+  height: 322px;
+  margin-right: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card--podcast {
+  background-color: rgba(37, 37, 37, 1);
+}
+
+.card--pop {
+  background-color: rgba(203, 97, 184, 1);
+}
+
+.card--image-full {
+  width: 100%;
+  height: 322px;
+  object-fit: cover;
+  display: block;
+}
+
+.card--image-music {
+  width: 262px;
+  height: 262px;
+  border-radius: 8px;
+  position: absolute;
+  left: 15px;
+}
+
+.card--image-logo {
+  position: absolute;
+  top: 280px;
+  left: 440px;
+  width: 20px;
+  height: 25px;
+}
+
+.title--slider-section {
+  font-family: Inter;
+  position: absolute;
+  top: 286px;
+  left: 465px;
+  color: white;
+  font-weight: 400;
+  height: 20px;
+  line-height: 18px;
+  font-size: 22px;
+}
+
+.title--slider-fullexp {
+  top: 286px;
+  left: 20px;
+  font-size: 18px;
+}
+
+.title--slider-musicexp {
+  top: 161px;
+  left: 300px;
+  font-size: 22px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+footer {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circle-button {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(190, 190, 190, 1);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: absolute;
+  right: 30px
+}
+
+.circle-button:hover {
+  background-color: rgba(180, 180, 180, 1);
+}
+
+.paused .slider-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 100vw) {
 
   .header__icon-containers {
     width: 31px;
-  }
-
-  .header__icon-items {
-    gap: 24px;
   }
 
   .header__icon-containers:nth-child(3) {
@@ -472,7 +612,7 @@ a {
     top: 55px;
   }
 
-  .main {
+  .main-features {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
@@ -524,6 +664,7 @@ a {
 }
 
 @media (max-width: 1024px) {
+
   header {
     height: 48px;
     justify-content: space-between;
@@ -537,10 +678,6 @@ a {
     display: none;
   }
 
-  header span {
-    display: none;
-  }
-
   .header__icon-items {
     gap: 0;
   }
@@ -550,7 +687,7 @@ a {
   }
 
   .hero--desert {
-    height: 650px;
+    height: 692px;
   }
 
   .hero--ultramarine {
@@ -654,7 +791,7 @@ a {
     left: 156px;
   }
 
-  .main {
+  .main-features {
     margin: 0;
   }
 
@@ -662,6 +799,44 @@ a {
   display: none;
 }
 
+
+.card {
+  height: 220px;
+  width: 400px;
+}
+
+.card--image-full {
+  background-size: cover;
+}
+
+.card--image-music {
+  width: 170px;
+  height: 170px;
+  background-size: cover;
+  left: 110px;
+}
+
+.card--image-logo {
+  top: 185px;
+  left: 295px;
+  width: 14px;
+  height: 17px;
+}
+
+.title--slider-section {
+  top: 186px;
+  left: 314px;
+  font-size: 15px;
+}
+
+.title--slider-fullexp {
+  display: none;
+
+}
+
+.title--slider-musicexp {
+  display: none;
+}
 }
 
 @media (max-width: 430px) {
@@ -679,10 +854,6 @@ a {
   }
 
   header a {
-    display: none;
-  }
-
-  header span {
     display: none;
   }
 

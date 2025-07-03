@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: rgba(245, 245, 247, 1);
   min-width: 1024px;
+  max-width: 2800px;
 }
 header {
   width: 100%;
@@ -20,6 +21,11 @@ header {
   text-align: center;
   vertical-align: middle;
   min-width: 1024px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 a {
@@ -101,16 +107,13 @@ a {
     height: 44px;
 }
 
-.specialist--text span {
+.specialist--text a {
     font-weight: 400;
     color: rgba(0, 102, 204, 1);
     height: 16px;
 }
 
-.specialist--text a {
-    font-weight: 400;
-    color: rgba(0, 102, 204, 1);
-    height: 16px;
+.specialist--text a:hover {
     text-decoration: underline;
 }
 
@@ -206,11 +209,15 @@ a {
 }
 
 .hero__product-text {
+    font-weight: 500;
     height: 16px;
 }
 
+.hero__product-text:hover {
+    text-decoration: underline;
+}
+
 .sections {
-    height: 558px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -227,8 +234,9 @@ a {
 }
 
 .section__product-container {
-    height: 500px;
+    height: 510px;
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 20px;
     padding-left: 140px;
@@ -242,10 +250,21 @@ a {
     height: 500px;
     flex-shrink: 0;
     border-radius: 18px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
     background-position: center;
     background-size: cover;
     scroll-snap-align: center;
+    transition: all 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.15);
+}
+
+.product__onlyatapple--text-container:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.15);
 }
 
 .product__480 {
@@ -418,10 +437,11 @@ a {
     font-size: 22px;
     line-height: 28px;
     border-radius: 18px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
     position: relative;
     display: flex;
     align-items: center;
+    transition: all 0.5s;
 }
 
 
@@ -621,6 +641,13 @@ button {
   background-color: transparent;
   color: rgba(29, 29, 31, 1);
   border: 1px solid rgba(29, 29, 31, 1);
+  transition: ease 75ms;
+}
+
+footer button:hover {
+    background-color: rgba(29, 29, 31, 1);
+    color: rgba(245, 245, 247, 1);
+    text-decoration: underline;
 }
 
 
